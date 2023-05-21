@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gün 1 - Göğüs ve Triceps</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      nav {
+        background-color: #f4f4f4;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #333;
+        margin: 0 10px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      nav a:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      nav a:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -5px;
+        transform: translateY(-50%);
+        height: 60%;
+        width: 1px;
+        background-color: #ccc;
+      }
+
+      nav a:hover {
+        background-color: #333;
+        color: #fff;
+      }
+
+      .icon {
+        margin-right: 5px;
+      }
+
+      main {
+        padding: 20px;
+        text-align: center;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      li.selected {
+        background-color: #8bc34a;
+        color: #fff;
+      }
+
+      li:hover {
+        background-color: #eee;
+      }
+
+      li h3 {
+        margin-top: 10px;
+      }
+
+      li img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      input[type="checkbox"] + label {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+      }
+
+      input[type="checkbox"] + label:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        background-color: #fff;
+      }
+
+      input[type="checkbox"]:checked + label:before {
+        content: "\2714";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #8bc34a;
+        color: #fff;
+        border-color: #8bc34a;
+      }
+
+      /* Medya sorguları */
+      @media only screen and (max-width: 600px) {
+        nav {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="antrenman.html">
+        <i class="fas fa-home icon"></i>Anasayfaya Dön
+      </a>
+      <a href="gun2.html">
+        <i class="fas fa-dumbbell icon"></i>Gün 2 - Sırt ve Biceps
+      </a>
+      <a href="gun3.html">
+        <i class="fas fa-dumbbell icon"></i>Gün 3 - Bacak ve Omuz
+      </a>
+      <a href="gun4.html">
+        <i class="fas fa-dumbbell icon"></i>Gün 4 - Biceps ve Triceps
+      </a>
+    </nav>
+    <main>
+      <h2>Göğüs Egzersizleri</h2>
+      <ul>
+        <li>
+          <input type="checkbox" id="exercise1" />
+          <label for="exercise1">Bench Press</label>
+          <img src="images/bench_press.gif" alt="Bench Press Gif" />
+        </li>
+        <li>
+          <input type="checkbox" id="exercise2" />
+          <label for="exercise2">İncline Bench Press</label>
+          <img
+            src="images/incline_bench_press.gif"
+            alt="İncline Bench Press Gif"
+          />
+        </li>
+        <li>
+          <input type="checkbox" id="exercise3" />
+          <label for="exercise3">Dumbbell Flyes</label>
+          <img src="images/dumbbell_flyes.gif" alt="Dumbbell Flyes Gif" />
+        </li>
+        <li>
+          <input type="checkbox" id="exercise4" />
+          <label for="exercise4">İncline Dumbbell Flyes</label>
+          <img
+            src="images/incline_dumbbell_flyes.gif"
+            alt="İncline Dumbbell Flyes Gif"
+          />
+        </li>
+        <li>
+          <input type="checkbox" id="exercise5" />
+          <label for="exercise5">Cable Crossover</label>
+          <img src="images/cable_crossover.gif" alt="Cable Crossover Gif" />
+        </li>
+        <li>
+          <input type="checkbox" id="exercise6" />
+          <label for="exercise6">Machine Fly</label>
+          <img src="images/machine_fly.gif" alt="Machine Fly Gif" />
+        </li>
+      </ul>
+    </main>
+    <div style="text-align: center">
+      <h2>Triceps Egzersizleri</h2>
+    </div>
+    <ul>
+      <li>
+        <input type="checkbox" id="exercise7" />
+        <label for="exercise7">Triceps Pushdown</label>
+        <img src="images/triceps_pushdown.gif" alt="Triceps Pushdown Gif" />
+      </li>
+      <li>
+        <input type="checkbox" id="exercise8" />
+        <label for="exercise8">Rope Triceps Pushdown</label>
+        <img
+          src="images/rope_triceps_pushdown.gif"
+          alt="Rope Triceps Pushdown Gif"
+        />
+      </li>
+      <li>
+        <input type="checkbox" id="exercise9" />
+        <label for="exercise9">Dumbbell Skull Crushers</label>
+        <img
+          src="images/dumbbell_skull_crushers.gif"
+          alt="Dumbbell Skull Crushers Gif"
+        />
+      </li>
+      <li>
+        <input type="checkbox" id="exercise10" />
+        <label for="exercise10">Overhead Triceps Extensions</label>
+        <img
+          src="images/overhead_triceps_extensions.gif"
+          alt="Overhead Triceps Extensions Gif"
+        />
+      </li>
+      <li>
+        <input type="checkbox" id="exercise11" />
+        <label for="exercise11">Dumbbell Kick Back</label>
+        <img src="images/dumbbell_kick_back.gif" alt="Dumbbell Kick Back Gif" />
+      </li>
+    </ul>
+
+    <script>
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      const listItems = document.querySelectorAll("li");
+
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", (e) => {
+          const listItem = e.target.parentNode;
+          if (e.target.checked) {
+            listItem.classList.add("selected");
+          } else {
+            listItem.classList.remove("selected");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

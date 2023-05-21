@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antrenman Programı</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      nav {
+        background-color: #f4f4f4;
+        padding: 10px;
+        text-align: center;
+      }
+      nav a {
+        text-decoration: none;
+        color: #333;
+        margin: 0 10px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        position: relative;
+      }
+      nav a:not(:last-child) {
+        margin-right: 10px;
+      }
+      nav a:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -5px;
+        transform: translateY(-50%);
+        height: 60%;
+        width: 1px;
+        background-color: #ccc;
+      }
+      nav a:hover {
+        background-color: #333;
+        color: #fff;
+      }
+      main {
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Medya sorguları */
+      @media only screen and (max-width: 600px) {
+        header {
+          padding: 10px;
+        }
+        nav {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        nav a {
+          margin: 5px;
+        }
+        nav a:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 5px;
+        }
+        nav a:nth-child(2n + 1) {
+          margin-right: 10px;
+        }
+        nav a:not(:last-child)::after {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Antrenman Programı</h1>
+    </header>
+    <nav>
+      <a href="gun1.html">Gün 1 - Göğüs ve Triceps</a>
+      <a href="gun2.html">Gün 2 - Sırt ve Biceps</a>
+      <a href="gun3.html">Gün 3 - Bacak ve Omuz</a>
+      <a href="gun4.html">Gün 4 - Biceps ve Triceps</a>
+    </nav>
+    <main>
+      <h2>Hoş Geldiniz!</h2>
+      <p>Lütfen bir antrenman günü seçin.</p>
+    </main>
+  </body>
+</html>

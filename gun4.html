@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gün 4 - Biceps ve Triceps</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      nav {
+        background-color: #f4f4f4;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #333;
+        margin: 0 10px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      nav a:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      nav a:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -5px;
+        transform: translateY(-50%);
+        height: 60%;
+        width: 1px;
+        background-color: #ccc;
+      }
+
+      nav a:hover {
+        background-color: #333;
+        color: #fff;
+      }
+
+      .icon {
+        margin-right: 5px;
+      }
+
+      main {
+        padding: 20px;
+        text-align: center;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      li.selected {
+        background-color: #8bc34a;
+        color: #fff;
+      }
+
+      li:hover {
+        background-color: #eee;
+      }
+
+      li h3 {
+        margin-top: 10px;
+      }
+
+      li img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      input[type="checkbox"] + label {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+      }
+
+      input[type="checkbox"] + label:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        background-color: #fff;
+      }
+
+      input[type="checkbox"]:checked + label:before {
+        content: "\2714";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #8bc34a;
+        color: #fff;
+        border-color: #8bc34a;
+      }
+
+      /* Medya sorguları */
+      @media only screen and (max-width: 600px) {
+        nav {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="antrenman.html">
+        <i class="fas fa-home icon"></i>Anasayfaya Dön
+      </a>
+      <a href="gun1.html">
+        <i class="fas fa-dumbbell icon"></i>Gün 1 - Göğüs ve Triceps
+      </a>
+      <a href="gun2.html">
+        <i class="fas fa-dumbbell icon"></i>Gün 2 - Sırt ve Biceps
+      </a>
+      <a href="gun3.html">
+        <i class="fas fa-dumbbell icon"></i>Gün 3 - Biceps ve Triceps
+      </a>
+    </nav>
+    <main>
+      <h2>Gün 4 - Biceps ve Triceps</h2>
+      <h3>Biceps Egzersizleri</h3>
+      <ul>
+        <li>
+          <input type="checkbox" id="exercise1" />
+          <label for="exercise1">Barbell Curl</label>
+          <img src="barbell_curl.gif" alt="Barbell Curl" />
+        </li>
+        <li>
+          <input type="checkbox" id="exercise2" />
+          <label for="exercise2">Hammer Curl</label>
+          <img src="hammer_curl.gif" alt="Hammer Curl" />
+        </li>
+        <li>
+          <input type="checkbox" id="exercise3" />
+          <label for="exercise3">Incline Dumbell Curl</label>
+          <img src="incline_dumbbell_curl.gif" alt="Incline Dumbell Curl" />
+        </li>
+        <li>
+          <input type="checkbox" id="exercise4" />
+          <label for="exercise4">Alternate Curl</label>
+          <img src="alternate_curl.gif" alt="Alternate Curl" />
+        </li>
+      </ul>
+      <h3>Triceps Egzersizleri</h3>
+      <ul>
+        <li>
+          <input type="checkbox" id="exercise5" />
+          <label for="exercise5">Triceps Pushdown</label>
+          <img src="triceps_pushdown.gif" alt="Triceps Pushdown" />
+        </li>
+        <li>
+          <input type="checkbox" id="exercise6" />
+          <label for="exercise6">Rope Triceps Pushdown</label>
+          <img src="rope_triceps_pushdown.gif" alt="Rope Triceps Pushdown" />
+        </li>
+        <li>
+          <input type="checkbox" id="exercise7" />
+          <label for="exercise7">Dumbbell Skull Crushers</label>
+          <img
+            src="dumbbell_skull_crushers.gif"
+            alt="Dumbbell Skull Crushers"
+          />
+        </li>
+        <li>
+          <input type="checkbox" id="exercise8" />
+          <label for="exercise8">Dumbbell Kick Back</label>
+          <img src="dumbbell_kick_back.gif" alt="Dumbbell Kick Back" />
+        </li>
+      </ul>
+    </main>
+    <script>
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      const listItems = document.querySelectorAll("li");
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", (e) => {
+          const listItem = e.target.parentNode;
+          if (e.target.checked) {
+            listItem.classList.add("selected");
+          } else {
+            listItem.classList.remove("selected");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
